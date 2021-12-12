@@ -1,5 +1,6 @@
 package modul_1.hw;
 
+import javax.management.Descriptor;
 import java.sql.*;
 
 public class Solution {
@@ -56,6 +57,25 @@ public class Solution {
         } catch (SQLException e) {
             System.err.println("WRONG getProductsByDescription");
             e.printStackTrace();
+        }
+    }
+
+    public void increasePrice() {
+        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+             Statement statement = connection.createStatement()) {
+            int res = statement.executeUpdate("update product set price = price +100 where price < 970");
+        } catch (SQLException e) {
+            System.err.println("WRONG increasePrice");
+            e.printStackTrace();
+        }
+    }
+
+    public void changeDescriptor() {
+        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+             Statement statement = connection.createStatement()) {
+            int res = statement.executeUpdate("update product set description = substring(description, position(description, ',', -1)-1) where length(description) > 100 ");
+        } catch (SQLException e) {
+            System.err.println("WRONG changeDescriptor");
         }
     }
 }
