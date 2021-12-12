@@ -2,28 +2,16 @@ package modul_1;
 
 import java.sql.*;
 
-public class ModulJDBC1 {
+public class Modul1JDBC {
     private static final String JDBC_DRIVER = "org.postgresql.Driver";
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
 
     private static final String USER = "miki";
     private static final String PASS = "123456";
 
-    public static String conect(String DB_URL, String USER, String PASS) throws SQLException {
-        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
-              Statement statement = connection.createStatement()){
-            try {
-                Class.forName(JDBC_DRIVER);
-            } catch (ClassNotFoundException e) {
-                System.out.println("Class " + JDBC_DRIVER + " not found");
-            }
-        }
 
-        return Sta
-    }
+    public static void main(String[] args) throws SQLException {
 
-
-    public static void main(String[] args) {
 
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
              Statement statement = connection.createStatement()) {

@@ -1,3 +1,5 @@
+package modul_1;
+
 public class Test {
     private long id;
     private String city;
@@ -23,7 +25,7 @@ public class Test {
 
     @Override
     public String toString() {
-        return "Test{" +
+        return "modul_1.Test{" +
                 "id=" + id +
                 ", city='" + city + '\'' +
                 ", cash=" + cash +

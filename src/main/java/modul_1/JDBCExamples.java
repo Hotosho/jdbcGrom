@@ -1,3 +1,5 @@
+package modul_1;
+
 import java.sql.*;
 
 public class JDBCExamples {
@@ -17,10 +19,10 @@ public class JDBCExamples {
             /*boolean res = statement.execute("insert into product values (2, 'toy111', 'for childrean', 60)");
             System.out.println(res);*/
 
-            /*int res = statement.executeUpdate("insert into product values (2, 'toy111', 'for childrean', 60)");
-            System.out.println(res);*/
-            /*int res = statement.executeUpdate("insert into product values (5, 'car', 'for children', 770)");
-            System.out.println(res);*/
+            /*int res = statement.executeUpdate("insert into product values (3, 'bike', 'for woman', 150)");
+            System.out.println(res);
+            int res1 = statement.executeUpdate("insert into product values (4, 'car', 'for man', 770)");
+            System.out.println(res1);*/
 
             /*boolean res = statement.execute("delete from product where name = 'toy111'");
             System.out.println(res);*/
